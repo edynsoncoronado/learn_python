@@ -57,24 +57,24 @@ fecha1 > fecha2  # False
 
 #### Aplicando formatos a fechas y horas
 ```python
-%a 	Nombre local abreviado de día de semana
-%A 	Nombre local completo de día de semana
-%b 	Nombre local abreviado de mes
-%B 	Nombre local completo de mes
-%d 	Día de mes [01,31]
-%H 	Hora (horario 24 horas) [00,23]
-%I 	Hora (horario 12 horas) [01,12]
-%j 	Número de día del año [001,366]
-%m 	Mes [01,12]
-%M 	Minuto [00,59]
-%p 	Etiqueta AM o PM
-%S 	Segundo
-%U 	Nº semana del año. Se considera al Domingo como primer día de semana [00,53]
-%w 	Establece el primer día de semana [0(Domingo),1(Lunes)... 6].
-%W 	Nº semana del año (Se considera al Lunes como primer día de semana) [00,53]
-%y 	Año en formato corto [00,99]
-%Y 	Año en formato largo
-%Z 	Nombre de Zona Horaria
+# %a 	Nombre local abreviado de día de semana
+# %A 	Nombre local completo de día de semana
+# %b 	Nombre local abreviado de mes
+# %B 	Nombre local completo de mes
+# %d 	Día de mes [01,31]
+# %H 	Hora (horario 24 horas) [00,23]
+# %I 	Hora (horario 12 horas) [01,12]
+# %j 	Número de día del año [001,366]
+# %m 	Mes [01,12]
+# %M 	Minuto [00,59]
+# %p 	Etiqueta AM o PM
+# %S 	Segundo
+# %U 	Nº semana del año. Se considera al Domingo como primer día de semana [00,53]
+# %w 	Establece el primer día de semana [0(Domingo),1(Lunes)... 6].
+# %W 	Nº semana del año (Se considera al Lunes como primer día de semana) [00,53]
+# %y 	Año en formato corto [00,99]
+# %Y 	Año en formato largo
+# %Z 	Nombre de Zona Horaria
 ```
 ##### Ejemplos
 ```python
@@ -100,3 +100,47 @@ ayer = hoy – timedelta(days=1)  # Resta a fecha actual 1 día
 mañana = hoy + timedelta(days=1)  # Suma a fecha actual 1 día
 diferencia_en_dias = mañana – hoy  # Resta las dos fechas
 ```
+
+### A partir de una fecha se obtiene tupla con año, nº semana y día de semana
+```python
+>>> datetime.isocalendar(hoy)
+(2020, 2, 1)
+```
+
+### Obtener día de la semana por su número
+```python
+>>> datetime.weekday(fecha1)
+# 0-Lunes, 1-Martes, 2-Miércoles, 3-Jueves, 4-Viernes , 5-Sábado y 6-Domingo
+0
+```
+
+### Obtener una tupla a partir de fecha-hora (datetime)
+```python
+>>> hoy.timetuple()
+time.struct_time(tm_year=2020, tm_mon=1, tm_mday=6, tm_hour=23, tm_min=38, tm_sec=45, tm_wday=0, tm_yday=6, tm_isdst=-1)
+```
+
+### Obtener calendario del mes actual (calendar.month)
+```python
+>>> import calendar
+>>> año = date.today().year 
+>>> mes = date.today().month
+>>> calendario_mes = calendar.month(año, mes)
+'    January 2020\nMo Tu We Th Fr Sa Su\n       1  2  3  4  5\n 6  7  8  9 10 11 12\n13 14 15 16 17 18 19\n20 21 22 23 24 25 26\n27 28 29 30 31\n'
+```
+
+### Obtener calendario del mes actual (calendar.TextCalendar)
+```python
+>>> calendario = calendar.TextCalendar(calendar.MONDAY)
+>>> calendario.prmonth(año, mes)
+    January 2020
+Mo Tu We Th Fr Sa Su
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30 31
+```
+
+### Calendario completo del año 2018
+print(calendar.TextCalendar(calendar.MONDAY).formatyear(2018, 2, 1, 1, 2))
