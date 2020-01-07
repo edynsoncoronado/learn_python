@@ -109,7 +109,7 @@ diferencia_en_dias = mañana – hoy  # Resta las dos fechas
 
 ### Obtener día de la semana por su número
 ```python
->>> datetime.weekday(fecha1)
+>>> datetime.weekday(hoy)
 # 0-Lunes, 1-Martes, 2-Miércoles, 3-Jueves, 4-Viernes , 5-Sábado y 6-Domingo
 0
 ```
