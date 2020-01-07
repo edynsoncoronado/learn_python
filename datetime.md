@@ -143,4 +143,24 @@ Mo Tu We Th Fr Sa Su
 ```
 
 ### Calendario completo del año 2018
-print(calendar.TextCalendar(calendar.MONDAY).formatyear(2018, 2, 1, 1, 2))
+```python
+# year 	Year for which the calendar should be generated.
+# w 	The width between two columns. Default value is 2.
+# l 	Blank line between two rows. Default value is 1.
+# c 	Space between two months (Column wise). Default value is 6
+# m 	Number of months in a row. Default value is 3.
+
+print(calendar.TextCalendar(calendar.MONDAY).formatyear(2020, w=2, l=1, c=6, m=3))
+```
+
+### Convertir segundos a minutos y horas
+```python
+>>> inicio = datetime(2020, 1, 7, 5, 32, 20)
+>>> fin = datetime(2020, 1, 7, 8, 10, 55)
+>>> r = fin - inicio
+>>> h, _ = divmod(r.seconds, 3600)
+>>> m, _ = divmod((r.seconds - (h * 3600)), 60)
+>>> s, _ = r.seconds - (h * 3600) - (m * 60)
+>>> print('horas:minutos:segundos = {}:{}:{}'.format(h, m ,s))
+horas:minutos:segundos = 2:38:35
+```
