@@ -56,6 +56,7 @@ fecha1 > fecha2  # False
 ```
 
 #### Aplicando formatos a fechas y horas
+```python
 %a 	Nombre local abreviado de día de semana
 %A 	Nombre local completo de día de semana
 %b 	Nombre local abreviado de mes
@@ -74,6 +75,7 @@ fecha1 > fecha2  # False
 %y 	Año en formato corto [00,99]
 %Y 	Año en formato largo
 %Z 	Nombre de Zona Horaria
+```
 ##### Ejemplos
 ```python
 >>> formato1 = "%a %b %d %H:%M:%S %Y"
