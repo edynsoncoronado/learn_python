@@ -4,15 +4,17 @@ Los sistemas Linux/UNIX tiene un contador de tiempo que inidica su inicio la med
 ### La tupla de fecha y hora.
 (<Año en cuatro cifras>, <número de mesde 1 a 12>, <número de día del mes de 0 a 31>, <hora del día de 0 a 23>,  <minutos de 0 a 60>, <segundos de 0 a 61>, <dia de la semana de 0(lunes) a 6(domingo>, <día del año de 1 a 366>, <valor entero de -1 a 1 para indicar si se apega a un esquema de ahorro de energía>)
 
-Módulo time
+### Módulo time
 Este módulo permite realizar algunas operaciones básicas de fecha y hora.
->>> import time
+```python
+import time
 
->>> time.time()
+time.time()
 Regresa el número de segundos transcurridos desde "epoch".
 
->>> time.sleep(5)
+time.sleep(5)
 Permite detener la ejecución de un script durante un tiempo defindo en segundos.
+```
 
 datetime
 Permite crear objetos de fecha y hora, ingresando una sucesión de datos en forma de una tupla de tiempo.
