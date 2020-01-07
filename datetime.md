@@ -10,22 +10,27 @@ Este módulo permite realizar algunas operaciones básicas de fecha y hora.
 import time
 
 time.time()
-Regresa el número de segundos transcurridos desde "epoch".
+# Regresa el número de segundos transcurridos desde "epoch".
 
 time.sleep(5)
-Permite detener la ejecución de un script durante un tiempo defindo en segundos.
+# Permite detener la ejecución de un script durante un tiempo defindo en segundos.
 ```
 
-datetime
+## datetime
 Permite crear objetos de fecha y hora, ingresando una sucesión de datos en forma de una tupla de tiempo.
+```python
 >>> from datetime import datetime
->>> fn = datetime(1984, 12, 25)
+>>> fn = datetime(1993, 04, 30)
+>>> datetime.datetime(1993, 4, 30, 0, 0)
 >>> fn.month
+4
 >>> fn.year
+1993
 >>> fn.date()
-
+datetime.date(1993, 4, 30)
 >>> datetime.now()
-Regresa un objeto de tipo datetime con la hora del momento en el que se ejecutó el método.
-
+datetime.datetime(2020, 1, 6, 23, 22, 51, 363383)
 >>> datetime.isoweekday(datetime.now())
-Regresa el número del día de la semana al que corresponde la fecha, siendo 1= lunes y así sucesivamente hasta 7= domingo.
+1
+# Regresa el número del día de la semana al que corresponde la fecha, siendo 1= lunes y así sucesivamente hasta 7= domingo.
+```
