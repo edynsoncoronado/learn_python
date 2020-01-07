@@ -142,7 +142,7 @@ Mo Tu We Th Fr Sa Su
 27 28 29 30 31
 ```
 
-### Calendario completo del año 2018
+### Calendario completo del año 2020
 ```python
 # year 	Year for which the calendar should be generated.
 # w 	The width between two columns. Default value is 2.
