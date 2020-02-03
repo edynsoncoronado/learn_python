@@ -10,4 +10,7 @@
 * https://realpython.com/python-requests/
 * https://leemendelowitz.github.io/blog/how-does-python-find-packages.html
 * https://www.pythond.com/21408/como-obtener-la-ruta-completa-del-directorio-del-archivo-actual-en-python.html 
+* https://medium.com/towards-artificial-intelligence/50-python-3-tips-tricks-e5dbe05212d7
+* https://www.youtube.com/watch?v=C-gEQdGVXbk
+* https://www.youtube.com/watch?v=0VH1Lim8gL8 [deep learning state of the art]
 
