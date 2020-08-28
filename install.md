@@ -11,8 +11,8 @@ sudo apt install python3.8
 ```
 ls /usr/bin/python*
 ```
-1. Copy the version you want. I my case, I copied /usr/bin/python3.8
-1. Open .barshrc file and scroll to the end. Paste the copied python version on the last line. 
+2. Copy the version you want. I my case, I copied /usr/bin/python3.8
+3. Open .barshrc file and scroll to the end. Paste the copied python version on the last line. 
 ```
 alias python = “usr/bin/python3.8”
 ```
